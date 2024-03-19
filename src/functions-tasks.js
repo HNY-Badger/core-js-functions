@@ -205,7 +205,7 @@ function logger(func, logFunc) {
  */
 function partialUsingArguments(fn, ...args) {
   let argums = [...args];
-  return function (...args2) {
+  return (...args2) => {
     argums = [...argums, ...args2];
     if (fn.length === argums.length) {
       return fn(...argums);
